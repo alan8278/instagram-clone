@@ -39,7 +39,7 @@ const Login = () => {
       </div>
       <div className="signup">
         <p className="account">Don't have an account?</p>
-        <p className="signup1">signup</p>
+        <p className="signup1" onClick={()=>navigate("/Signup")}>signup</p>
       </div>
       </div>
     

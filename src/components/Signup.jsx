@@ -1,30 +1,61 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import "./Signup.scss";
+import logo from "../assets/instagram-logo.png";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleSignup = async (e) => {
+  const handleSignup = (e) => {
     e.preventDefault();
-    try {
-      await axios.post("http://localhost:5000/api/signup", { email, password });
-      navigate("/login");
-    } catch (err) {
-      console.error(err);
-    }
+
+    // 🚀 Simulating User Registration (Replace with Backend API)
+    console.log("User Signed Up:", { email, username, password });
+
+    // ✅ Redirect to Login Page After Signup
+    navigate("/login");
   };
 
   return (
     <div className="signup-container">
-      <h2>Signup</h2>
+      <img src={logo} alt="Instagram Logo" className="signup-logo" />
+
       <form onSubmit={handleSignup}>
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <button type="submit">Signup</button>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="input-box"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          className="input-box"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="input-box"
+          required
+        />
+        <button className="btn" type="submit">
+          Sign Up
+        </button>
       </form>
+
+      <p className="login-link">
+        Already have an account? <span onClick={() => navigate("/")}>Log in</span>
+      </p>
     </div>
   );
 };
