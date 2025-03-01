@@ -1,0 +1,124 @@
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .login-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 350px;  // ✅ Keeps the original width but responsive
+    padding: 20px;
+    border: 1px solid #ddd; // ✅ Keeps the original border
+    border-radius: 5px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // ✅ Keeps the previous shadow effect
+    margin-top: 50px;
+  }
+  
+  .input-box {
+    width: 100%;
+    max-width: 250px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .login-logo {
+    width: 200px; // ✅ Keeps the original logo size
+  }
+  
+  .btn {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 35px;
+    border-radius: 10px;
+    color: rgb(254, 254, 254);
+    background-color: rgba(0, 149, 246, 1);
+    font-weight: 700;
+    font-size: 13px;
+    width: 270px;
+    max-width: 500px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .orsection {
+    padding-top: 10px;
+  }
+  
+  .fbsection {
+    display: flex;
+    align-items: center;
+    justify-content: center;  // ✅ Centers Facebook login section
+    margin-top: -10px;
+    cursor: pointer;
+  }
+  
+  .fb {
+    color: rgba(0, 149, 246, 1);
+    font-weight: bold;
+  }
+  
+  .fb_logo {
+    width: 30px;
+    margin-right: 10px;
+  }
+  
+  .forget {
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  // ✅ Keeps the signup section aligned properly
+  .signup{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 350px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd; // ✅ Keeps the border like before
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signup1 {
+    color: rgba(0, 149, 246, 1);
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  // ✅ Responsive Design for Mobile Screens
+  @media (max-width: 768px) {
+    .login-container {
+      width: 90%;
+      max-width: 350px; // ✅ Ensures it doesn't become too wide
+    }
+  
+    .signup{
+      width: 90%;
+      max-width: 350px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .login-logo {
+      width: 150px; // ✅ Adjusts logo size for smaller screens
+    }
+  
+    .fbsection {
+      flex-direction: column; // ✅ Stacks Facebook login
+      align-items: center;
+    }
+  
+    .signup-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  

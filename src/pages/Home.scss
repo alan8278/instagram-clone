@@ -1,0 +1,58 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+  height: 100vh;
+
+  .instagram-logo {
+      display: block;
+      width: 150px;
+      margin-bottom: -15px;
+      margin-top: -15px;
+      cursor: pointer;
+  }
+
+  .home-content {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      margin-top: 20px;
+  }
+
+  /* ✅ Main Section: Stories + Post Feed */
+  .main-section {
+      width: 60%;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* ✅ Messages Section - Now Fixed in Place */
+  // .messages-section {
+  //     width: 30%;
+  //     background: white;
+  //     padding: 10px;
+  //     border-radius: 20px;
+  //     border: 1px solid #ddd;
+  //     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  //     position: fixed;  /* ✅ Stays in place */
+  //     right: 5%;
+  //     top: 80px;  /* ✅ Adjust based on navbar */
+  //     height: calc(100vh - 100px);  /* ✅ Takes up available height */
+  //     overflow-y: auto;  /* ✅ Scrollable for messages */
+  // }
+
+  /* ✅ Navbar at the Bottom */
+  .navbar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: white;
+      padding: 10px;
+      border-top: 2px solid #ddd;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  }
+}

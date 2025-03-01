@@ -1,0 +1,25 @@
+.navbar {
+    display: flex;
+    justify-content: center; /* ✅ Centered icons */
+    align-items: center;
+    gap: 80px; /* ✅ Reduced space between icons */
+    padding: 10px 0;
+    width: 100%;
+    background: white;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  
+    .nav-icon {
+      font-size: 24px;
+      cursor: pointer;
+      color: #333;
+      transition: color 0.3s ease-in-out;
+  
+      &:hover {
+        color: rgba(0, 149, 246, 1);
+      }
+    }
+  }
+  
